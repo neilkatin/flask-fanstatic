@@ -1,9 +1,9 @@
 from fanstatic import (init_needed, del_needed, Publisher, get_library_registry,
                        DEFAULT_SIGNATURE, Resource, Library, Group)
 from flask import Blueprint, g, Markup, current_app, request
-from werkzeug import cached_property
+from werkzeug.utils import cached_property
 from werkzeug.utils import import_string
-from werkzeug.wsgi import DispatcherMiddleware
+from werkzeug.middleware.dispatcher import DispatcherMiddleware
 
 
 class Fanstatic(object):
